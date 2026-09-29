@@ -9,7 +9,7 @@ import {
     View,
 } from "react-native";
 
-//import CardPersonagem from "./CardPersonagens.js";
+import CardPersonagem from "../Card/CardPersonagens";
 
 const API_URL = "https://api.jikan.moe/v4/anime/20/characters";
 

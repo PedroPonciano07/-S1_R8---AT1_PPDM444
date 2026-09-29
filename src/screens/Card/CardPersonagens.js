@@ -10,18 +10,16 @@ import {
 
 export default function CardPersonagem({ personagem, onPress }) {
 
-    const character = personagem?.character;
-
     return (
         <TouchableOpacity
             style={styles.card}
-            activeOpacity={0.8}
             onPress={onPress}
+            activeOpacity={0.8}
         >
 
             <Image
                 source={{
-                    uri: character?.images?.jpg?.image_url,
+                    uri: personagem?.character?.images?.jpg?.image_url,
                 }}
                 style={styles.image}
             />
@@ -29,11 +27,11 @@ export default function CardPersonagem({ personagem, onPress }) {
             <View style={styles.info}>
 
                 <Text style={styles.name}>
-                    {character?.name || "Sem nome"}
+                    {personagem?.character?.name || "Sem nome"}
                 </Text>
 
                 <Text style={styles.detail}>
-                    ID: {character?.mal_id ?? "-"}
+                    ID: {personagem?.character?.mal_id || "-"}
                 </Text>
 
                 <Text style={styles.detail}>
